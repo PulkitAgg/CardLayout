@@ -19,8 +19,11 @@ export default class App extends Component<Props> {
           <Text>Trending Topics</Text>
           <Text>View All</Text>
         </View>
-        <ScrollView horizontal={"true"} >
-          <View style={styles.feedCardSwipe}>
+        <ScrollView
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}
+        >
+          <View style={[styles.feedCardSwipe, styles.leftMargin]}>
             <View style={styles.feedCardData}>
               <Image
                 style={styles.imageHolder}
@@ -59,7 +62,7 @@ export default class App extends Component<Props> {
               <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                 <Text style={styles.imageText}>YES</Text>
               </View></View>
-            <View style={styles.feedCardData}>
+            <View style={[styles.feedCardData, styles.rightMargin]}>
               <Image
                 style={styles.imageHolder}
                 source={{ uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png' }}
@@ -105,14 +108,20 @@ export default class App extends Component<Props> {
         </View>
 
 
-        <ScrollView style={{ flex: 1 }}>
+        <ScrollView
+          style={{ flex: 1 }}
+          showsVerticalScrollIndicator={false}
+        >
           {this.trendingArray()}
           <View style={styles.feedCard}>
             <View style={styles.feedHeading}>
               <Text>Trending</Text>
               <Text>View All</Text>
             </View>
-            <ScrollView horizontal={"true"} >
+            <ScrollView
+              horizontal={true}
+              showsHorizontalScrollIndicator={false}
+            >
               <View style={styles.feedCardSwipe}>
                 <View style={styles.feedCardData}>
                   <Image
@@ -170,7 +179,10 @@ export default class App extends Component<Props> {
               <Text>Trending</Text>
               <Text>View All</Text>
             </View>
-            <ScrollView horizontal={"true"} >
+            <ScrollView
+              horizontal={true}
+              showsHorizontalScrollIndicator={false}
+            >
               <View style={styles.feedCardSwipe}>
                 <View style={styles.feedCardData}>
                   <Image
@@ -229,7 +241,10 @@ export default class App extends Component<Props> {
               <Text>Trending</Text>
               <Text>View All</Text>
             </View>
-            <ScrollView horizontal={"true"} >
+            <ScrollView
+              horizontal={true}
+              showsHorizontalScrollIndicator={false}
+            >
               <View style={styles.feedCardSwipe}>
                 <View style={styles.feedCardData}>
                   <Image
@@ -292,13 +307,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
     // backgroundColor: 'grey',
     paddingTop: 45,
-    paddingLeft: 20,
-    paddingRight: 20,
+    // paddingLeft: 20,
+    // paddingRight: 20,
     paddingBottom: 20,
     flexWrap: 'wrap',
   },
   heading: {
-    fontSize: 25
+    fontSize: 25,
+    paddingLeft: 10,
   },
   cardLayout: {
     flex: 0.2,
@@ -354,19 +370,28 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     alignItems: 'center',
     justifyContent: 'center',
+    borderRadius: 15,
   },
   feedCard: {
     // flex: 2,
     // maxHeight: Dimensions.get('window').height / 5,
     // backgroundColor: 'skyblue',
     marginTop: 20,
-    padding: 10,
+    // padding: 10,
     flexDirection: 'column'
+  },
+  leftMargin: {
+    marginLeft: 20,
+  },
+  rightMargin: {
+    marginRight: 20,
   },
   feedHeading: {
     // flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    paddingLeft: 10,
+    paddingRight: 10,
     // backgroundColor: 'red'
   },
   feedCardSwipe: {

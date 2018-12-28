@@ -122,7 +122,7 @@ export default class App extends Component<Props> {
               horizontal={true}
               showsHorizontalScrollIndicator={false}
             >
-              <View style={styles.feedCardSwipe}>
+              <View style={[styles.feedCardSwipe, styles.leftMargin]}>
                 <View style={styles.feedCardData}>
                   <Image
                     style={styles.imageHolder}
@@ -161,7 +161,7 @@ export default class App extends Component<Props> {
                   <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                     <Text style={styles.imageText}>YES</Text>
                   </View></View>
-                <View style={styles.feedCardData}>
+                <View style={[styles.feedCardData, styles.rightMargin]}>
                   <Image
                     style={styles.imageHolder}
                     source={{ uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png' }}
@@ -183,7 +183,7 @@ export default class App extends Component<Props> {
               horizontal={true}
               showsHorizontalScrollIndicator={false}
             >
-              <View style={styles.feedCardSwipe}>
+              <View style={[styles.feedCardSwipe, styles.leftMargin]}>
                 <View style={styles.feedCardData}>
                   <Image
                     style={styles.imageHolder}
@@ -222,7 +222,7 @@ export default class App extends Component<Props> {
                   <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                     <Text style={styles.imageText}>YES</Text>
                   </View></View>
-                <View style={styles.feedCardData}>
+                <View style={[styles.feedCardData, styles.rightMargin]}>
                   <Image
                     style={styles.imageHolder}
                     source={{ uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png' }}
@@ -245,7 +245,7 @@ export default class App extends Component<Props> {
               horizontal={true}
               showsHorizontalScrollIndicator={false}
             >
-              <View style={styles.feedCardSwipe}>
+              <View style={[styles.feedCardSwipe, styles.leftMargin]}>
                 <View style={styles.feedCardData}>
                   <Image
                     style={styles.imageHolder}
@@ -284,7 +284,7 @@ export default class App extends Component<Props> {
                   <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                     <Text style={styles.imageText}>YES</Text>
                   </View></View>
-                <View style={styles.feedCardData}>
+                <View style={[styles.feedCardData, styles.rightMargin]}>
                   <Image
                     style={styles.imageHolder}
                     source={{ uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png' }}
